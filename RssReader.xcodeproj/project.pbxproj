@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D370563206350DF00F6BCB3 /* StudyBookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D370562206350DF00F6BCB3 /* StudyBookmarkViewController.swift */; };
+		3D3705652063522200F6BCB3 /* InterestBookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3705642063522200F6BCB3 /* InterestBookmarkViewController.swift */; };
+		3D37056B2063704500F6BCB3 /* StudyBookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D37056A2063704500F6BCB3 /* StudyBookmark.swift */; };
+		3D37056D206370CA00F6BCB3 /* InterestBookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D37056C206370CA00F6BCB3 /* InterestBookmark.swift */; };
 		3D388B36205F8B0200DF291E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D388B35205F8B0200DF291E /* AppDelegate.swift */; };
 		3D388B3B205F8B0200DF291E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D388B39205F8B0200DF291E /* Main.storyboard */; };
 		3D388B3D205F8B0200DF291E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D388B3C205F8B0200DF291E /* Assets.xcassets */; };
@@ -15,13 +19,16 @@
 		3D388B4A205F993D00DF291E /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D388B49205F993D00DF291E /* Setting.swift */; };
 		3D388B4C205F99C000DF291E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D388B4B205F99C000DF291E /* Item.swift */; };
 		3D388B4E205F9D8B00DF291E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D388B4D205F9D8B00DF291E /* DetailViewController.swift */; };
-		3DD5BC572060B8280084D0BD /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD5BC562060B8280084D0BD /* BookmarkViewController.swift */; };
-		3DD5BC592060C7EC0084D0BD /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD5BC582060C7EC0084D0BD /* Bookmark.swift */; };
+		3D84D07420639C3100EB429F /* SetSubjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D84D07320639C3100EB429F /* SetSubjectViewController.swift */; };
 		8A774B420B7A384BF8B36576 /* Pods_RssReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 013A5D2B656DAD9825F63FA1 /* Pods_RssReader.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		013A5D2B656DAD9825F63FA1 /* Pods_RssReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RssReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D370562206350DF00F6BCB3 /* StudyBookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyBookmarkViewController.swift; sourceTree = "<group>"; };
+		3D3705642063522200F6BCB3 /* InterestBookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestBookmarkViewController.swift; sourceTree = "<group>"; };
+		3D37056A2063704500F6BCB3 /* StudyBookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyBookmark.swift; sourceTree = "<group>"; };
+		3D37056C206370CA00F6BCB3 /* InterestBookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestBookmark.swift; sourceTree = "<group>"; };
 		3D388B32205F8B0200DF291E /* RssReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RssReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D388B35205F8B0200DF291E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D388B3A205F8B0200DF291E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -32,8 +39,7 @@
 		3D388B49205F993D00DF291E /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		3D388B4B205F99C000DF291E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		3D388B4D205F9D8B00DF291E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		3DD5BC562060B8280084D0BD /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
-		3DD5BC582060C7EC0084D0BD /* Bookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
+		3D84D07320639C3100EB429F /* SetSubjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SetSubjectViewController.swift; path = ../../../../.Trash/SetSubjectViewController.swift; sourceTree = "<group>"; };
 		C8A638C6E3DAFC6005307A21 /* Pods-RssReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RssReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-RssReader/Pods-RssReader.release.xcconfig"; sourceTree = "<group>"; };
 		CCDF1EAFA5E8C7E8FC874FED /* Pods-RssReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RssReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RssReader/Pods-RssReader.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,9 +94,12 @@
 				3D388B47205F8EFA00DF291E /* ListViewController.swift */,
 				3D388B49205F993D00DF291E /* Setting.swift */,
 				3D388B4B205F99C000DF291E /* Item.swift */,
+				3D37056A2063704500F6BCB3 /* StudyBookmark.swift */,
+				3D37056C206370CA00F6BCB3 /* InterestBookmark.swift */,
 				3D388B4D205F9D8B00DF291E /* DetailViewController.swift */,
-				3DD5BC562060B8280084D0BD /* BookmarkViewController.swift */,
-				3DD5BC582060C7EC0084D0BD /* Bookmark.swift */,
+				3D370562206350DF00F6BCB3 /* StudyBookmarkViewController.swift */,
+				3D3705642063522200F6BCB3 /* InterestBookmarkViewController.swift */,
+				3D84D07320639C3100EB429F /* SetSubjectViewController.swift */,
 			);
 			path = RssReader;
 			sourceTree = "<group>";
@@ -238,13 +247,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D84D07420639C3100EB429F /* SetSubjectViewController.swift in Sources */,
+				3D37056D206370CA00F6BCB3 /* InterestBookmark.swift in Sources */,
+				3D3705652063522200F6BCB3 /* InterestBookmarkViewController.swift in Sources */,
 				3D388B4C205F99C000DF291E /* Item.swift in Sources */,
 				3D388B48205F8EFA00DF291E /* ListViewController.swift in Sources */,
 				3D388B4E205F9D8B00DF291E /* DetailViewController.swift in Sources */,
 				3D388B36205F8B0200DF291E /* AppDelegate.swift in Sources */,
-				3DD5BC572060B8280084D0BD /* BookmarkViewController.swift in Sources */,
-				3DD5BC592060C7EC0084D0BD /* Bookmark.swift in Sources */,
+				3D370563206350DF00F6BCB3 /* StudyBookmarkViewController.swift in Sources */,
 				3D388B4A205F993D00DF291E /* Setting.swift in Sources */,
+				3D37056B2063704500F6BCB3 /* StudyBookmark.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

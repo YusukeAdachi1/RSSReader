@@ -68,9 +68,10 @@ class ListViewController: UITableViewController {
 //リストビューのセルクラス
 class ListViewCell: UITableViewCell {
     
-    @IBOutlet weak var titleLabel: UILabel!         //記事のタイトルラベル
-    @IBOutlet weak var descriptionLabel: UILabel!   //記事の内容ラベル
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var thumbnail: UIImageView!
+    
     
     var item: Item? {    //itemの処理
         didSet {

@@ -1,8 +1,8 @@
 //
-//  BookmarkViewController.swift
+//  InterestBookmark.swift
 //  RssReader
 //
-//  Created by sonicmoov on 2018/03/20.
+//  Created by sonicmoov on 2018/03/22.
 //  Copyright © 2018年 mycompany. All rights reserved.
 //
 
@@ -10,9 +10,9 @@ import Foundation
 import UIKit
 import RealmSwift
 
-class BookmarkViewController: UITableViewController {
+class InterestBookmarkViewController: UITableViewController {
     
-    var bookmarks: Results<Bookmark>?
+    var interestbookmarks: Results<InterestBookmark>?
     var realm: Realm!
     
     //Viewの表示が完了後に呼び出されるメソッド
@@ -21,7 +21,7 @@ class BookmarkViewController: UITableViewController {
         
         //ブックマーク情報取得
         let realm = try! Realm()
-        bookmarks = realm.objects(Bookmark.self).sorted(byKeyPath: "date", ascending: false)
+        interestbookmarks = realm.objects(InterestBookmark.self).sorted(byKeyPath: "date", ascending: false)
         
         //ナビゲーションバーの右側に編集ボタンを追加[問題2]
         self.navigationItem.rightBarButtonItem = self.editButtonItem
@@ -30,13 +30,13 @@ class BookmarkViewController: UITableViewController {
     
     //セルの個数を指定する
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return bookmarks?.count ?? 0
+        return interestbookmarks?.count ?? 0
     }
     
     //セル値を設定
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BookmarkViewCell", for: indexPath)
-        guard let bm = bookmarks?[indexPath.row] else {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "InterestBookmarkViewCell", for: indexPath)
+        guard let bm = interestbookmarks?[indexPath.row] else {
             return cell
         }
         cell.textLabel?.text = bm.title
@@ -46,7 +46,7 @@ class BookmarkViewController: UITableViewController {
     //一覧からWebView画面へ行く時に呼び出されるメソッド
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let indexPath = self.tableView.indexPathForSelectedRow {
-            guard let bm = bookmarks?[indexPath.row] else {
+            guard let bm = interestbookmarks?[indexPath.row] else {
                 return
             }
             let item = Item()
@@ -70,7 +70,7 @@ class BookmarkViewController: UITableViewController {
             print("削除")
             
             //今選択している記事がなんかおかしくなければreturnで返す(?) indexPath.row : 選択している記事のこと
-            guard let bm = bookmarks?[indexPath.row] else {
+            guard let bm = interestbookmarks?[indexPath.row] else {
                 return
             }
             
