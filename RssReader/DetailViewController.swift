@@ -38,12 +38,12 @@ class DetailViewController: UIViewController {
         
 
     @IBAction func addStudy(_ sender: Any) {
-       // addStudy.setTitle("aiueo", forState: UIControlState.normal)
         
-        let alert = UIAlertController(title: "確認", message: "Favoritesに追加しますか？", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "アラート表示", message: "どのブックマークに保存しますか？", preferredStyle: UIAlertControllerStyle.actionSheet)
         
-            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
-                (action: UIAlertAction) in
+        let Action1: UIAlertAction = UIAlertAction(title: "Favorites", style: UIAlertActionStyle.default, handler:{
+                (action: UIAlertAction!) -> Void in
+                print("addFavorites")
             
                 guard let i = self.item else {
                     return
@@ -60,84 +60,40 @@ class DetailViewController: UIViewController {
                 try! realm.write {
                     realm.add(studybookmark)
                 }
-            }
-            let cancelButton = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil)
+        })
+        
+        
+        let Action2: UIAlertAction = UIAlertAction(title: "Bookmarks", style: UIAlertActionStyle.default, handler:{
+                (action: UIAlertAction!) -> Void in
+                print("addBookmarks")
+
+                guard let j = self.item else {
+                    return
+                }
             
-            alert.addAction(okAction)
-            alert.addAction(cancelButton)
+                let interestbookmark = InterestBookmark()
+                interestbookmark.title = j.title
+                interestbookmark.detail = j.detail
+                interestbookmark.link = j.link
+                interestbookmark.date = NSDate()
             
-            present(alert,animated: true, completion: nil)    }
-        
-        
-        
-    @IBAction func addInterest(_ sender: Any) {
-    
-        let alert = UIAlertController(title: "確認", message: "Bookmarksに追加しますか？", preferredStyle: UIAlertControllerStyle.alert)
-        
-        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
-            (action: UIAlertAction) in
-            
-            guard let j = self.item else {
-                return
-            }
-        
-            let interestbookmark = InterestBookmark()
-            interestbookmark.title = j.title
-            interestbookmark.detail = j.detail
-            interestbookmark.link = j.link
-            interestbookmark.date = NSDate()
-            
-            //realmに情報を[追加] 例外が発生しても強制処理
-            let realm = try! Realm()
-            try! realm.write {
-                realm.add(interestbookmark)
-            }
-        }
-        let cancelButton = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil)
-        
-        alert.addAction(okAction)
-        alert.addAction(cancelButton)
-        
-        present(alert,animated: true, completion: nil)
+                //realmに情報を[追加] 例外が発生しても強制処理
+                let realm = try! Realm()
+                try! realm.write {
+                    realm.add(interestbookmark)
+                }
+        })
+
+
+        let CancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: UIAlertActionStyle.cancel, handler:{
+                (action: UIAlertAction!) -> Void in
+                print("Cancel")
+        })
+
+        alert.addAction(Action1)
+        alert.addAction(Action2)
+        alert.addAction(CancelAction)
+
+        present(alert, animated: true, completion: nil)
     }
 }
-        // Cancelボタン
-     //   let CancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: UIAlertActionStyle.cancel, handler:{
-     //       (action: UIAlertAction!) -> Void in
-     //       print("cancelAction")
-    //    })
-        //コントローラの実装
-
-        
-        //OKボタンの実装　OKボタンを押したらブックマークに記事を追加
-    //    let OkAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
-    //        (action: UIAlertAction) in
-    //
-     //       //Reference to property 'item' in closure requires explict 'self.' to make capture semantics explicit
-    //        guard let i = self.item else {
-    //            return
-   //         }
-    //
-    //        let bookmark = Bookmark()
-    //        bookmark.title = i.title
-     //       bookmark.detail = i.detail
-     //       bookmark.link = i.link
-     //       bookmark.date = NSDate()
-    //
-    //        //realmに情報を[追加] 例外が発生しても強制処理
-    //        let realm = try! Realm()
-    //        try! realm.write {
-    //            realm.add(bookmark)
-    //        }
-    //
-    //
-    //    }
-        
-     //   let CancelAction = UIAlertAction(title: "CANCEL", style: UIAlertActionStyle.cancel, handler: nil)
-        
-
-        //cancelボタンの追加
-     //   alertController.addAction(CancelAction)
-        
-        //アラートの表示
-    //    present(alertController,animated: true,completion:nil)
